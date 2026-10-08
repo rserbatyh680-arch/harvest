@@ -100,7 +100,7 @@ h2{font-size:13px;letter-spacing:.1em;text-transform:uppercase;font-weight:600}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:var(--r);padding:18px 20px;min-width:0}
 .card-head{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}
 
-.rooms{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.rooms{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}
 @media (max-width:520px){.rooms{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .room{border:1px solid var(--line);border-radius:10px;padding:10px 12px;display:grid;gap:4px;background:var(--surface-2)}
 .room .n{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -139,8 +139,8 @@ tr.editing td{background:var(--sun-soft)}
 .form{display:grid;gap:12px}
 .fgroup{display:grid;gap:8px}
 .frow{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
-.frow.three{grid-template-columns:repeat(3,minmax(0,1fr))}
-@media (max-width:420px){.frow.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.frow.three{grid-template-columns:repeat(4,minmax(0,1fr))}
+@media (max-width:560px){.frow.three{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .field{display:grid;gap:4px;min-width:0}
 .field label{font-size:12px;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .field input{width:100%;background:var(--bg);border:1px solid var(--line);border-radius:9px;padding:9px 10px;font-family:var(--f-num);font-size:14px;min-width:0}
@@ -308,10 +308,10 @@ tr.editing td{background:var(--sun-soft)}
 
 <script>
 (() => {
-  const ROOMS = 6;
+  const ROOMS = 8;
   /* Скрины заносов: ["win1.jpg","подпись"], файлы кладутся рядом с index.html */
   const WINS = [];
-  const DEFAULT_SETTINGS = { rooms:["GGPoker","Winamax","ACR","PokerStars.es","PokerStars.com","Рум 6"], startBR:0, startDate:"", hu:{played:0,won:0} };
+  const DEFAULT_SETTINGS = { rooms:["GGPoker","PokerStars","Winamax","PokerStars.es","RedStar","ACR","CoinPoker","Chico"], startBR:0, startDate:"", hu:{played:0,won:0} };
   let settings = structuredClone(DEFAULT_SETTINGS);
   let sessions = [];
   let store = null, demo = false, isAdmin = false;
